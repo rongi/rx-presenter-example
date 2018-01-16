@@ -50,18 +50,15 @@ fun present(
 
   val updateButtonIsEnabled = isDownloadingArticles.map { it.not() }
 
-  val emptyViewIsVisible = combineLatest(isDownloadingArticles, hasArticles
-  ) { downloadingArticles, hasArticles ->
+  val emptyViewIsVisible = combineLatest(isDownloadingArticles, hasArticles) { downloadingArticles, hasArticles ->
     !hasArticles && !downloadingArticles
   }
 
-  val progressIsVisible = combineLatest(isDownloadingArticles, hasArticles
-  ) { downloadingArticles, hasArticles ->
+  val progressIsVisible = combineLatest(isDownloadingArticles, hasArticles) { downloadingArticles, hasArticles ->
     downloadingArticles && !hasArticles
   }.distinctUntilChanged()
 
-  val smallProgressIsVisible = combineLatest(isDownloadingArticles, hasArticles
-  ) { downloadingArticles, hasArticles ->
+  val smallProgressIsVisible = combineLatest(isDownloadingArticles, hasArticles) { downloadingArticles, hasArticles ->
     downloadingArticles && hasArticles
   }
 
