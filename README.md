@@ -2,9 +2,7 @@
 
 This repository is a code example for this article: [Implementing your presenter with Rx or Functional Reactive architecture for Android applications](https://rongi.github.io/kotlin-blog/rx-presenter.html)
 
-![Example](https://github.com/rongi/rx-presenter-example/raw/master/docs/example.gif)
-
-<img src="https://github.com/rongi/rx-presenter-example/raw/master/docs/example.gif" alt="Example" style="width: 360px;"/>
+<img src="https://github.com/rongi/rx-presenter-example/raw/master/docs/example.gif" alt="Example" width="360"/>
 
 [Most interesting part of the code](https://github.com/rongi/rx-presenter/tree/master/app/src/main/java/com/github/rongi/rxpresenter/example/app/main)
 
