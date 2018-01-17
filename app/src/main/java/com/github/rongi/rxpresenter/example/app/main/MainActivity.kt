@@ -3,9 +3,9 @@ package com.github.rongi.rxpresenter.example.app.main
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
-import com.github.rongi.rxpresenter.example.App
 import com.github.rongi.rxpresenter.example.R
 import com.github.rongi.rxpresenter.example.app.detail.DetailActivity
+import com.github.rongi.rxpresenter.example.appRoots
 import com.github.rongi.rxpresenter.example.common.DividerItemDecoration
 import com.github.rongi.rxpresenter.example.common.clicks
 import com.github.rongi.rxpresenter.example.common.visible
@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
     val model = present(
       updateButtonClicks = update_button.clicks(),
       articleClicks = articleClicks,
-      articlesProvider = App.appModule.articlesProvider()
+      articlesProvider = appRoots.articlesProvider()
     )
 
     render(model)
@@ -54,7 +54,7 @@ class MainActivity : AppCompatActivity() {
       articleClicks.onNext(it)
     }
     recycler_view.adapter = listAdapter
-    val divider = DividerItemDecoration(resources);
+    val divider = DividerItemDecoration(resources)
     recycler_view.addItemDecoration(divider)
   }
 
