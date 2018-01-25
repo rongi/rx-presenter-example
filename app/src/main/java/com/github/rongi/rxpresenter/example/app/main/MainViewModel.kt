@@ -25,8 +25,7 @@ fun present(
 ): MainViewModel {
   // Internal states
 
-  // This emits [Start] item when request starts and [Result] item
-  // when request is completed
+  // This emits [Start] item when request starts and [Result] when request is completed
   val getArticlesWithStartAndEnd = articlesProvider.getArticles()
     .markStartAndEnd()
 
