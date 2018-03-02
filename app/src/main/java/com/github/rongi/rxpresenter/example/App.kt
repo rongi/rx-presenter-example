@@ -13,7 +13,7 @@ class App : Application() {
     super.onCreate()
 
     appRoots = DaggerRoots.builder()
-      .appModule(AppModule(this))
+      .appModule(AppModule())
       .build()
   }
 
