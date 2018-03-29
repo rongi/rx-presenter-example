@@ -54,3 +54,7 @@ repositories {
 kapt {
     generateStubs = true
 }
+
+androidExtensions {
+    experimental = true
+}
