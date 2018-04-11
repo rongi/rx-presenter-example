@@ -1,4 +1,4 @@
-# An example of how to implement a presenter with Rx (aka MVI or Model View Intent)
+# How to implement a presenter with Rx on Android (aka MVI or Model View Intent)
 
 This repository contains a code example for this article: [Implementing your presenter with Rx or Functional Reactive architecture for Android applications](https://rongi.github.io/kotlin-blog/rx-presenter.html)
 
