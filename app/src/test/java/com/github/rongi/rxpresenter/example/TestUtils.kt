@@ -24,6 +24,6 @@ val testSchedulersTestRule = TestRule { base, _ ->
   }
 }
 
-infix fun Any.assertEquals(another: Any) {
-  Assert.assertEquals(this, another)
+infix fun Any.assertEquals(expected: Any) {
+  Assert.assertEquals(expected, this)
 }
