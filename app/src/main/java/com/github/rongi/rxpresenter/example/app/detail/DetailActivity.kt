@@ -3,7 +3,7 @@ package com.github.rongi.rxpresenter.example.app.detail
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import com.github.rongi.rxpresenter.example.R
 import com.github.rongi.rxpresenter.example.app.main.data.Article
 import kotlinx.android.synthetic.main.detail_activity.*

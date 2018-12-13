@@ -2,7 +2,7 @@ package com.github.rongi.rxpresenter.example.common
 
 import android.content.res.Resources
 import android.graphics.Canvas
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView
 import com.github.rongi.rxpresenter.example.R
 import java.lang.Math.round
 
@@ -12,13 +12,13 @@ private const val RIGHT_PADDING = 12f
 /**
  * Divider for RecyclerView
  */
-class DividerItemDecoration(resources: Resources) : RecyclerView.ItemDecoration() {
+class DividerItemDecoration(resources: Resources) : androidx.recyclerview.widget.RecyclerView.ItemDecoration() {
 
   private val leftPaddingPx = toPixels(LEFT_PADDING, resources)
   private val rightPaddingPx = toPixels(RIGHT_PADDING, resources)
   private val divider = resources.getDrawable(R.drawable.divider)
 
-  override fun onDrawOver(c: Canvas, parent: RecyclerView, state: RecyclerView.State) {
+  override fun onDrawOver(c: Canvas, parent: androidx.recyclerview.widget.RecyclerView, state: androidx.recyclerview.widget.RecyclerView.State) {
     val left = parent.paddingLeft + leftPaddingPx
     val right = parent.width - parent.paddingRight - rightPaddingPx
 
@@ -26,7 +26,7 @@ class DividerItemDecoration(resources: Resources) : RecyclerView.ItemDecoration(
     for (i in 0 until childCount) {
       val child = parent.getChildAt(i)
 
-      val params = child.layoutParams as RecyclerView.LayoutParams
+      val params = child.layoutParams as androidx.recyclerview.widget.RecyclerView.LayoutParams
 
       val top = child.bottom + params.bottomMargin
       val bottom = top + divider.intrinsicHeight

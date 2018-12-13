@@ -1,9 +1,8 @@
 package com.github.rongi.rxpresenter.example.app.main
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.RecyclerView
 import com.github.rongi.klaster.Klaster
 import com.github.rongi.rxpresenter.example.R
 import com.github.rongi.rxpresenter.example.app.detail.DetailActivity
@@ -22,7 +21,7 @@ import kotlinx.android.synthetic.main.main_activity.*
 
 class MainActivity : AppCompatActivity() {
 
-  private lateinit var listAdapter: RecyclerView.Adapter<*>
+  private lateinit var listAdapter: androidx.recyclerview.widget.RecyclerView.Adapter<*>
 
   private val articleClicks = BehaviorSubject.create<Int>()
 
@@ -58,14 +57,14 @@ class MainActivity : AppCompatActivity() {
   }
 
   private fun initList() {
-    recycler_view.layoutManager = LinearLayoutManager(this)
+    recycler_view.layoutManager = androidx.recyclerview.widget.LinearLayoutManager(this)
     listAdapter = createAdapter()
     recycler_view.adapter = listAdapter
     val divider = DividerItemDecoration(resources)
     recycler_view.addItemDecoration(divider)
   }
 
-  private fun createAdapter() = Klaster.get()
+  private fun createAdapter(): RecyclerView.Adapter<RecyclerView.ViewHolder> = Klaster.get()
     .itemCount { articles.size }
     .view(R.layout.list_item, layoutInflater)
     .bind { position ->
