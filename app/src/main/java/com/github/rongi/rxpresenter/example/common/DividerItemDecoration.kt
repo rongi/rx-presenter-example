@@ -18,7 +18,7 @@ class DividerItemDecoration(resources: Resources) : RecyclerView.ItemDecoration(
   private val rightPaddingPx = toPixels(RIGHT_PADDING, resources)
   private val divider = resources.getDrawable(R.drawable.divider)
 
-  override fun onDrawOver(c: Canvas, parent: RecyclerView, state: RecyclerView.State?) {
+  override fun onDrawOver(c: Canvas, parent: RecyclerView, state: RecyclerView.State) {
     val left = parent.paddingLeft + leftPaddingPx
     val right = parent.width - parent.paddingRight - rightPaddingPx
 
